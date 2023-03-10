@@ -23,3 +23,37 @@ Use your rule with different projects and describe you findings below. See the [
 
 ## Answer
 
+The rulset i used for the ifNested detection:
+```<ruleset name="IfNested Rules"
+    xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.io/ruleset_2_0_0.xsd">
+
+    <description>
+        test about ifNested
+    </description>
+
+
+    <rule name="ifNested"
+      language="java"
+      message=""
+      class="net.sourceforge.pmd.lang.rule.XPathRule">
+   <description>
+
+   </description>
+   <priority>3</priority>
+   <properties>
+      <property name="version" value="2.0"/>
+      <property name="xpath">
+         <value>
+<![CDATA[
+//IfStatement[count(.//IfStatement)>=2]
+]]>
+         </value>
+      </property>
+   </properties>
+</rule>
+
+</ruleset>```
+
+Too my suprise i found way more case of presence of ifNested in the code, it's not an obligation to NOT do ifNested but it does show how much of a complex code it can be.

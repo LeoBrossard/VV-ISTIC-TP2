@@ -1,7 +1,4 @@
-# Code of your exercise
-
-The rulset i used for the ifNested detection:
-```<ruleset name="IfNested Rules"
+<ruleset name="Custom Rules"
     xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.io/ruleset_2_0_0.xsd">
@@ -31,6 +28,4 @@ The rulset i used for the ifNested detection:
    </properties>
 </rule>
 
-</ruleset>```
-
-Too my suprise i found way more case of presence of ifNested in the code, it's not an obligation to NOT do ifNested but it does show how much of a complex code it can be.
+</ruleset>

@@ -33,6 +33,11 @@ public class Main {
             result.ifSuccessful(unit -> unit.accept(printer, null));
             return SourceRoot.Callback.Result.DONT_SAVE;
         });
+        for (String string : printer.list) {
+            if(!printer.listOfMethod.contains("get"+string.toLowerCase())){
+                System.out.println(string);
+            }
+        }
     }
 
 
